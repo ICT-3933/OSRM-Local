@@ -1,6 +1,6 @@
 # Configurar OSRM Localmente con Docker
 
-Esta guía te ayudará a configurar Open Source Routing Machine (OSRM) localmente en tu máquina utilizando Docker. Usarás Docker para ejecutar un backend de OSRM para rutas de conducción y caminata, lo que te permitirá consultar tiempos de viaje entre varias ubicaciones.
+Esta guía te ayudará a configurar Open Source Routing Machine (OSRM) localmente en tu máquina utilizando Docker. Usarás Docker para ejecutar un backend de OSRM para obtener rutas de *drive* y *walk*, lo que te permitirá consultar tiempos de viaje entre varias ubicaciones.
 
 ## 1. Instalar Docker
 
@@ -21,15 +21,15 @@ Una vez que Docker esté instalado y corriendo, ya puedes proceder con la config
 
 Debes descargar los archivos necesarios para correr OSRM en tu computadora. Puedes encontrar estos archivos en el siguiente enlace de Google Drive:
 
-[Enlace a los archivos de OSRM](https://drive.google.com) 
+[Enlace a los Archivos de OSRM](https://*drive*.google.com) 
 
 Descarga y descomprime los archivos en una carpeta local en tu máquina.
 
-## 3. Correr OSRM para Conducción y Caminata
+## 3. Correr OSRM para Drive y Walk
 
 Para correr OSRM, usa los siguientes comandos en tu terminal. Debes ajustar la ruta de la carpeta donde guardaste los archivos descargados.
 
-### OSRM para Conducción
+### OSRM para Drive
 
 Abre el terminal y ejecuta el siguiente comando (cambia la ruta `/ruta/a/tu/carpeta/OSRMData_Drive` por la ruta donde descargaste los datos):
 
@@ -37,21 +37,23 @@ Abre el terminal y ejecuta el siguiente comando (cambia la ruta `/ruta/a/tu/carp
 docker run -t -i -p 5001:5000 -v /ruta/a/tu/carpeta/OSRMData_Drive:/data osrm/osrm-backend osrm-routed --algorithm ch --max-table-size 1000000 /data/chile-latest.osrm --mmap=0
 ```
 
-Este comando correrá el servidor de OSRM para rutas de conducción en el puerto 5001.
+Este comando correrá el servidor de OSRM para rutas *drive* en el puerto 5001.
 
-### OSRM para Caminata
-Ahora, para rutas de caminata, ejecuta el siguiente comando en el terminal (cambia la ruta /ruta/a/tu/carpeta/OSRMData_Walk por la ubicación correcta):
+### OSRM para Walk
+Ahora, para rutas *walk*, ejecuta el siguiente comando en el terminal (cambia la ruta /ruta/a/tu/carpeta/OSRMData_Walk por la ubicación correcta):
 
 ```bash
 docker run -t -i -p 5002:5000 -v /ruta/a/tu/carpeta/OSRMData_Walk:/data osrm/osrm-backend osrm-routed --algorithm ch --max-table-size 1000000 /data/chile-latest.osrm --mmap=0
 ```
-Esto correrá el servidor de OSRM para rutas de caminata en el puerto 5002.
+Esto correrá el servidor de OSRM para rutas *walk* en el puerto 5002.
 
 ## 4. Cómo Probar
 Después de ejecutar estos comandos, los servidores de OSRM estarán activos en tu máquina:
 
-Conducción: El servidor estará disponible en http://localhost:5001
-Caminata: El servidor estará disponible en http://localhost:5002
+Drive: El servidor estará disponible en http://localhost:5001
+
+Walk: El servidor estará disponible en http://localhost:5002
+
 Puedes probarlos enviando solicitudes desde tu navegador o con alguna herramienta como Postman.
 
 ## 5. Notas Importantes
