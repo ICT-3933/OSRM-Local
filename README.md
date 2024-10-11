@@ -21,7 +21,7 @@ Una vez que Docker esté instalado y corriendo, ya puedes proceder con la config
 
 Debes descargar los archivos necesarios para correr OSRM en tu computadora. Puedes encontrar estos archivos en el siguiente enlace de Google Drive:
 
-[Enlace a los Archivos de OSRM](https://*drive*.google.com) 
+[Enlace a los Archivos de OSRM](https://drive.google.com/drive/folders/1lRRZZFSIcNFvlSfTX2OSICchEupuPj2K?usp=share_link) 
 
 Descarga y descomprime los archivos en una carpeta local en tu máquina.
 
