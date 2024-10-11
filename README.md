@@ -59,4 +59,5 @@ Puedes probarlos enviando solicitudes desde tu navegador o con alguna herramient
 ## 5. Notas Importantes
 Asegúrate de tener Docker corriendo cada vez que quieras utilizar OSRM.
 Si tienes problemas con los puertos, asegúrate de que no estén siendo utilizados por otros servicios.
+
 ¡Y eso es todo! Ya deberías tener tu OSRM corriendo localmente usando Docker.
