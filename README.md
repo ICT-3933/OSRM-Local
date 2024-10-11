@@ -34,7 +34,7 @@ Para correr OSRM, usa los siguientes comandos en tu terminal. Debes ajustar la r
 Abre el terminal y ejecuta el siguiente comando (cambia la ruta `/ruta/a/tu/carpeta/OSRMData_Drive` por la ruta donde descargaste los datos):
 
 ```bash
-docker run -t -i -p 5001:5000 -v /ruta/a/tu/carpeta/OSRMData_Drive:/data osrm/osrm-backend osrm-routed --algorithm ch --max-table-size 1000000 /data/chile-latest.osrm --mmap=0
+docker run -t -i -p 5001:5000 -v "/ruta/a/tu/carpeta/OSRMData_Drive:/data" osrm/osrm-backend osrm-routed --algorithm ch --max-table-size 1000000 /data/chile-latest.osrm --mmap=0
 ```
 
 Este comando correrá el servidor de OSRM para rutas *drive* en el puerto 5001.
@@ -43,7 +43,7 @@ Este comando correrá el servidor de OSRM para rutas *drive* en el puerto 5001.
 Ahora, para rutas *walk*, ejecuta el siguiente comando en el terminal (cambia la ruta /ruta/a/tu/carpeta/OSRMData_Walk por la ubicación correcta):
 
 ```bash
-docker run -t -i -p 5002:5000 -v /ruta/a/tu/carpeta/OSRMData_Walk:/data osrm/osrm-backend osrm-routed --algorithm ch --max-table-size 1000000 /data/chile-latest.osrm --mmap=0
+docker run -t -i -p 5002:5000 -v "/ruta/a/tu/carpeta/OSRMData_Walk:/data" osrm/osrm-backend osrm-routed --algorithm ch --max-table-size 1000000 /data/chile-latest.osrm --mmap=0
 ```
 Esto correrá el servidor de OSRM para rutas *walk* en el puerto 5002.
 
