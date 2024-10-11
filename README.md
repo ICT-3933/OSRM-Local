@@ -7,13 +7,13 @@ Esta guía te ayudará a configurar [Open Source Routing Machine (OSRM)](https:/
 Para usar OSRM localmente, primero necesitas instalar Docker en tu máquina. Sigue las instrucciones a continuación según tu sistema operativo:
 
 - **Para Windows**:  
-  Descarga e instala Docker Desktop desde [este enlace](https://www.docker.com/products/docker-desktop/). Después de la instalación, asegúrate de que Docker esté funcionando abriendo Docker Desktop.
+  Descarga e instala Docker Desktop desde [este enlace](https://docs.docker.com/desktop/install/windows-install/). Después de la instalación, asegúrate de que Docker esté funcionando abriendo Docker Desktop.
 
 - **Para macOS**:  
-  Descarga e instala Docker Desktop desde [este enlace](https://www.docker.com/products/docker-desktop/). Una vez instalado, puedes abrir Docker Desktop desde tu carpeta de Aplicaciones.
+  Descarga e instala Docker Desktop desde [este enlace](https://docs.docker.com/desktop/install/mac-install/). Una vez instalado, puedes abrir Docker Desktop desde tu carpeta de Aplicaciones.
 
 - **Para Linux**:  
-  Instala Docker siguiendo las instrucciones oficiales para tu distribución desde [este enlace](https://docs.docker.com/engine/install/). Asegúrate de habilitar y ejecutar Docker después de la instalación.
+  Instala Docker siguiendo las instrucciones oficiales para tu distribución desde [este enlace](https://docs.docker.com/desktop/install/linux/). Asegúrate de habilitar y ejecutar Docker después de la instalación.
 
 Una vez que Docker esté instalado y corriendo, ya puedes proceder con la configuración de OSRM.
 
